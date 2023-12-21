@@ -20,7 +20,7 @@ const Navbar = () => {
         showConfirmButton: false,
         timer: 1500
       });
-    }).catch((error) => {
+    }).catch(() => {
       // An error happened.
     });
   }
@@ -29,7 +29,7 @@ const Navbar = () => {
     setclick(!click);
   };
   return (
-    <div className="flex justify-between items-center bg-[#f3f3f3] py-5 px-20  shadow-xl ggg">
+    <div className="flex justify-between items-center bg-[#f3f3f3] py-5 px-20  shadow-xl ggg ">
       <Logo></Logo>
       <nav>
         <ul
