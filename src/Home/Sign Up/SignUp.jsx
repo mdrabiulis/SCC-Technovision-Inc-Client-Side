@@ -7,7 +7,7 @@ import useAuthContext from "../../Hooks/useAuthContext";
 
 const SignUp = () => {
     const [userErr, setUserErr] = useState("");
-    const { userupdateProfile, createUserWithEmail } = useAuthContext();
+    const { updateUserProfile, createUserWithEmailandPass,ignOutusers } = useAuthContext();
     const navigate = useNavigate();
   
     const {
@@ -18,11 +18,11 @@ const SignUp = () => {
     } = useForm();
   
     const onSubmit = (data) => {
-      createUserWithEmail(data.email, data.password)
+        createUserWithEmailandPass(data.email, data.password)
         .then((result) => {
           console.log(result.user);
   
-          userupdateProfile(data.name, data.photo)
+          updateUserProfile(data.name, data.photo)
             .then(() => {
               
             })
@@ -37,7 +37,7 @@ const SignUp = () => {
             timer: 1500,
           });
           navigate("/");
-          window.location.reload();
+          ignOutusers()
         })
         .catch((error) => {
           console.log(error.message);

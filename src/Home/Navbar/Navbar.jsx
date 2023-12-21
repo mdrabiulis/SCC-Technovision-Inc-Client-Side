@@ -3,9 +3,27 @@ import "./Navbar.css";
 import { FiAlignJustify, FiXCircle } from "react-icons/fi";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
+import useAuthContext from "../../Hooks/useAuthContext";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const {user, ignOutusers} =useAuthContext()
   const [click, setclick] = useState(false);
+
+  const logout =()=>{
+    ignOutusers()
+    .then(() => {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: " logout has been success",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }).catch((error) => {
+      // An error happened.
+    });
+  }
 
   const hendelClick = () => {
     setclick(!click);
@@ -36,9 +54,33 @@ const Navbar = () => {
           <Link to={"/"}><li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
             Service
           </li></Link>
-          <Link to={"/login"}><li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
-            Login
-          </li></Link>
+
+{
+  user?<div className="dropdown dropdown-start">
+  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+    <div className="w-10 rounded-full">
+      <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+    </div>
+  </div>
+  <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 ">
+    <li>
+      <a className="justify-between">
+        Profile
+        
+      </a>
+    </li>
+    <li><a>Settings</a></li>
+    <li onClick={logout}><a>Logout</a></li>
+  </ul>
+</div>
+:<Link to={"/login"}><li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
+  Login
+</li></Link>
+}
+
+          
+          
+
 
 
 
