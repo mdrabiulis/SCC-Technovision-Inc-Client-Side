@@ -83,7 +83,7 @@ const LogIn = () => {
             <span className="text-red-700">{userErr}</span>
 
             <div className="form-control mt-6">
-              <button className="btn  bg-[#312ECB]  hover:bg-[#1877F2] text-white text-xl">
+              <button className="btn  bg-[#1877F2]  hover:bg-[#312ECB] text-white text-xl">
                 Login
               </button>
             </div>

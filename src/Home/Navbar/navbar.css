@@ -1,20 +1,27 @@
 @media screen and (max-width: 769px) {
   .rrr {
     position: fixed;
+    z-index: 10;
     top: 79px;
     right: -300px;
     width: 300px;
     height: 100vh;
-    background: #2a3239;
+    background: #1e2e44;
     padding-left: 15px;
   }
   .active {
     position: fixed;
+    z-index: 10;
     top: 79px;
     right: 0px;
     width: 300px;
     height: 100vh;
-    background: #2a3239;
+    background: #1e2e44;
     padding-left: 15px;
+  }
+
+  .ggg{
+    
+    z-index: 100;
   }
 }

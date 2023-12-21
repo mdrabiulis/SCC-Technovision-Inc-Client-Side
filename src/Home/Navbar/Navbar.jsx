@@ -11,7 +11,7 @@ const Navbar = () => {
     setclick(!click);
   };
   return (
-    <div className="flex justify-between items-center bg-[#f3f3f3] py-5 px-20  shadow-xl z-50">
+    <div className="flex justify-between items-center bg-[#f3f3f3] py-5 px-20  shadow-xl ggg">
       <Logo></Logo>
       <nav>
         <ul
@@ -21,22 +21,22 @@ const Navbar = () => {
               : "rrr flex flex-col lg:flex-row pt-4 lg:pt-0 gap-4 lg:gap-8 ease-in-out duration-500"
           }
         >
-          <li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
+          <li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
             Home
           </li>
-          <li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
+          <li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
             About
           </li>
-          <li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
+          <li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
             Blogs
           </li>
-          <li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
+          <li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
             Contact
           </li>
-          <Link to={"/"}><li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
+          <Link to={"/"}><li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
             Service
           </li></Link>
-          <Link to={"/login"}><li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
+          <Link to={"/login"}><li className="text-[#1877F2] hover:text-[#312ECB] duration-300 ease-out font-bold hover:underline">
             Login
           </li></Link>
 
@@ -48,11 +48,11 @@ const Navbar = () => {
       <div className=" lg:hidden" onClick={hendelClick}>
         {click ? (
           <button>
-            <FiXCircle className="text-white w-8 h-8" />
+            <FiXCircle className="text-[#1877F2] w-8 h-8" />
           </button>
         ) : (
           <button>
-            <FiAlignJustify className="text-white w-8 h-8" />
+            <FiAlignJustify className="text-[#1877F2] w-8 h-8" />
           </button>
         )}
       </div>
