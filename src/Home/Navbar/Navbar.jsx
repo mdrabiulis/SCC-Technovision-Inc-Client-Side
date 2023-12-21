@@ -36,6 +36,10 @@ const Navbar = () => {
             <li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
               Service
             </li>
+            <li className="text-[#fff] hover:text-[#17cf97] duration-300 ease-out font-bold hover:underline">
+              LogIn
+            </li>
+
           </ul>
         </nav>
 
