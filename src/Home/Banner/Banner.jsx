@@ -10,7 +10,7 @@ import Button from "../../Button/Button";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

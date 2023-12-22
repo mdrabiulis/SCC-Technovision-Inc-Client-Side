@@ -29,7 +29,7 @@ const Navbar = () => {
     setclick(!click);
   };
   return (
-    <div className="flex justify-between items-center bg-[#f3f3f3] py-5 px-20  shadow-xl ggg ">
+    <div className="flex justify-around items-center bg-[#f3f3f3] py-5  shadow-xl ggg ">
       <Logo></Logo>
       <nav>
         <ul
@@ -62,14 +62,15 @@ const Navbar = () => {
       <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
     </div>
   </div>
-  <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 ">
+  <ul tabIndex={0} className="mt-3 z-[100] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 mr-60">
     <li>
-      <a className="justify-between">
+      <a className="">
         Profile
         
       </a>
     </li>
     <li><a>Settings</a></li>
+    <Link to={'/dashboard'}><li>Dashboard</li></Link>
     <li onClick={logout}><a>Logout</a></li>
   </ul>
 </div>
